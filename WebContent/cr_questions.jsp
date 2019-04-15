@@ -70,8 +70,7 @@ table, th, td {
 				</table>
 			
 			<form action="answer.jsp" method="POST">
-				Question ID: <input type="text" name="questionID" /> <br /> 
-				Customer Representative ID: <input type="text" name="ID" /> <br /> 
+				Question ID: <input type="text" name="questionID" /> <br />  
 				Answer: <input type="text"  name="Answer" /> <br /> 
 				<input type="submit" value="Reply" />
 			</form>

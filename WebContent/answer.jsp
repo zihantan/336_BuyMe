@@ -15,7 +15,8 @@ try {
 	Statement stmt = con.createStatement();
 	
 	String questionID = request.getParameter("questionID");
-	String ID = request.getParameter("ID");
+	//String ID = request.getParameter("ID");
+	String ID = (String)session.getAttribute("ID");
 	String Answer = request.getParameter("Answer");
 	
 	if( questionID.equals("") || ID.equals("")||Answer.equals("")) {
@@ -23,10 +24,16 @@ try {
 		return;
 	}
 
-	String update = "UPDATE customer_question SET ID = '" + ID + "', Answer = '" + Answer + "' WHERE idquestion = '" + questionID + "'";
-	int result = stmt.executeUpdate(update);
+	ResultSet rs = stmt.executeQuery("select * from customer_question where idquestion='" + questionID + "'");
+	if(rs.next()) {		
+		String update = "UPDATE customer_question SET ID = '" + ID + "', Answer = '" + Answer + "' WHERE idquestion = '" + questionID + "'";
+		int result = stmt.executeUpdate(update);
+		out.print("Your answers are submitted! <a href='cr_questions.jsp'>Return to Recent Question Page</a>");
+	} else {
+		out.print("Did not find that question! <a href='cr_questions.jsp'>Return to Recent Question Page</a>");
+	}
 
-	out.print("Your answers are submitted! <a href='cr_questions.jsp'>Return to Recent Question Page</a>");
+	
 } catch (Exception ex) {
 	out.print("Answer submition Failed! <a href='cr_questions.jsp'>try again</a>");
 }

@@ -14,7 +14,8 @@ try {
 
 	Statement stmt = con.createStatement();
 	
-	String username = request.getParameter("username");
+	//String username = request.getParameter("username");
+	String username = (String) session.getAttribute("userId");
 	String question = request.getParameter("question");
 	
 	
