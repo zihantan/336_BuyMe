@@ -16,10 +16,10 @@
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
 		Statement stmt = con.createStatement();
 					
-		ResultSet rs = stmt.executeQuery("select sum(trans_price) from auction");
+		ResultSet rs = stmt.executeQuery("select sum(trans_price) as total from auction");
 		 if (rs.next()) {
 			 		//out.println("Welcome " + username + "! <a href='home.jsp'>Logout</a>");
-		        String counteRemember= rs.getString("sum");
+		        String counteRemember= rs.getString("total");
 		        out.println(counteRemember);
 		} else {
 			     out.println("Invalid report <a href='greport.html'>try again</a>");
