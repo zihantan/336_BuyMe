@@ -7,11 +7,6 @@
 <%@ page import ="java.sql.*" %>
 <%
 	   
-	String pwd = request.getParameter("password");
-	if(username.equals("") || pwd.equals("")) {
-		out.print("Login Failed! Empty Inputs! <a href='login.jsp'>try again</a>");
-		return;
-	}
 	
 	//session.setAttribute("userid",username);
 
