@@ -1,16 +1,18 @@
 <html>
 <head>
-<title>Login Form</title>
+<title>Generate Report</title>
 </head>
 </html>
+
 
 <%@ page import ="java.sql.*" %>
 <%
 	   
 	
 	//session.setAttribute("userid",username);
-
+	//out.print("test");
 	if (request.getParameter("totalearn") != null) {
+		//out.print("test");
 		String url = "jdbc:mysql://cs336group5.czzknrtounuc.us-east-2.rds.amazonaws.com:3306/cs336";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
@@ -20,11 +22,14 @@
 		 if (rs.next()) {
 			 		//out.println("Welcome " + username + "! <a href='home.jsp'>Logout</a>");
 		        String counteRemember= rs.getString("total");
-		        out.println(counteRemember);
-		        out.println("Go back to the generating report page if you want<a href='greport.html'>back</a>");
-		} else {
-			     out.println("Invalid report or no transaction yet <a href='greport.html'>try again</a>");
-		}
+		        if(counteRemember!=null) {
+		        	out.print("Total earnings are: $" + counteRemember);
+		        	%><br> <%
+		        	out.print("Go back to the generating report page if you want <a href='greport.html'>back</a>");
+		        } else {
+		        	out.println("Invalid report or no transaction yet <a href='greport.html'>try again</a>");
+		        }
+		 }
 	}else if (request.getParameter("userrp") != null) {
 		String username = request.getParameter("user"); 
 		String url = "jdbc:mysql://cs336group5.czzknrtounuc.us-east-2.rds.amazonaws.com:3306/cs336";
