@@ -49,7 +49,7 @@
     			</tr>
     			<%
 			}
-		 	"Go back to the generating report page if you want<a href='greport.html'>back</a>"
+		 	out.println("Go back to the generating report page if you want<a href='greport.html'>back</a>");
 		}
 	}else if (request.getParameter("shoesrp") != null) {
 		String shoesID = request.getParameter("shoes");
@@ -75,7 +75,7 @@
 				</tr>
 			<%
 			}
-	 		"Go back to the generating report page if you want<a href='greport.html'>back</a>"
+	 		out.println("Go back to the generating report page if you want<a href='greport.html'>back</a>");
 		}
 	}
 %>
