@@ -31,11 +31,11 @@
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
 		Statement stmt = con.createStatement();
 					
-		ResultSet rs = stmt.executeQuery("select * from customerrepresentative where ID='" + username + "' and pwd='" + pwd + "'");
+		ResultSet rs = stmt.executeQuery("select sum(trans_price) from auction");
 		 if (rs.next()) {
 			 		//out.println("Welcome " + username + "! <a href='home.jsp'>Logout</a>");
-			 		session.setAttribute("ID", username);
-			 		response.sendRedirect("customerrepresentative.jsp");
+		        String counteRemember= rs.getString("sum");
+		        out.println(counteRemember);
 		} else {
 			        out.println("Invalid report <a href='greport.html'>try again</a>");
 		}
@@ -45,11 +45,11 @@
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
 		Statement stmt = con.createStatement();
 					
-		ResultSet rs = stmt.executeQuery("select * from admin where ID='" + username + "' and pwd='" + pwd + "'");
+		ResultSet rs = stmt.executeQuery("select sum(trans_price) from auction");
 		 if (rs.next()) {
 			 		//out.println("Welcome " + username + "! <a href='home.jsp'>Logout</a>");
-			 		session.setAttribute("ID", username);
-			 		response.sendRedirect("admin.html");
+		        String counteRemember= rs.getString("sum");
+		        out.println(counteRemember);
 		} else {
 			        out.println("Invalid report <a href='greport.html'>try again</a>");
 		}
