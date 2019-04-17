@@ -60,13 +60,13 @@
 				    	<label for="shoes">shoes</label>
 				    	<input type="text" class="form-control" id="shoes" name="shoes" placeholder="Please type in shoesID">
 				 </div>
-				<input type="submit" class="btn btn-default" name="shoesrp" value="shoesrp">
+				<input type="submit" class="btn btn-default" name="shoesrp" value="shoes report">
 				 
 			     <div class="form-group">
 				    	<label for="itemtype">item type</label>
 				    	<input type="text" class="form-control" id="itemtype" name="itemtype" placeholder="Please type in item type">
 				 </div>
-				 <input type="submit" class="btn btn-default" name="itemrp" value="itemrp">
+				 <input type="submit" class="btn btn-default" name="typerp" value="type report">
 				 
 				 <center>
 				 <h3>Best Selling of</h3>
@@ -75,12 +75,12 @@
 				 <h4>item</h4>
 				 <div class="form-group">
 				 </div>
-				 <input type="submit" class="btn btn-default">
+				 <input type="submit" class="btn btn-default" name="bestitem" value="best item(s) report">
 				 
 				 <h4>user</h4>
 				 <div class="form-group">
 				 </div>
-				 <input type="submit" class="btn btn-default">
+				 <input type="submit" class="btn btn-default" name="bestenduser" value="best end-user report">
 		
 
 				</form>
