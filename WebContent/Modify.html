@@ -41,10 +41,24 @@
                         <input type="text" class="form-control" id="Email" name="Email" placeholder="Email.(Note: you could only change one account information per time )">
                         <label for="Password">newPassword</label>
                         <input type="password" class="form-control" id="Password" name="Password" placeholder="new Password.(Note: you could only change one account information per time )">
-                        <input type="submit" class="btn btn-default">
+                        <input type="submit" name ="modifyinfo" value ="submit">
 				</form>
 		
-			
+				<center>
+				<h3>Remove Bids  </h3>
+				</center>
+				<form action="Modify.jsp" method="POST">
+				Bid ID: <input type="text" name="bidid" /> <br />  		
+				<input type="submit" name="removebid" value="remove bid">
+				</form>
+				
+				<center>
+				<h3>Remove Auction  </h3>
+				</center>
+				<form action="Modify.jsp" method="POST">
+				Auction ID: <input type="text" name="auctionid" /> <br />  		
+				<input type="submit" name="removeauction" value="remove auction">
+				</form>
 			
 		</div>
 	</div>

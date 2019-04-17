@@ -36,7 +36,8 @@
 		<h1>BuyMe</h1>
 		<h3>Welcome</h3>
 		<br>
-		<p>As a customer representative, please select one of the following tabs on the navigation bar up top to do your job!</p>
+		<p>This is a customer representative account.</p>
+		<p>If you want to remove auction/bid, please go to Modify.</p>
         </center>
 		<br>
 	</div>
