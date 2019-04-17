@@ -41,6 +41,7 @@ if (request.getParameter("search") != null) {
 	    <th>Brand</th>
 	    <th>Initial Price</th>
 	    <th>Current Bid</th>
+	    <th>Current Bid User</th>
 	    <th>Price Increment</th>
 	    <th>Color</th>
 	    <th>Size</th>
@@ -60,6 +61,7 @@ if (request.getParameter("search") != null) {
     			<td><%=rs.getString("brand")%></td>
     			<td><%=rs.getString("ip") %></td>
     			<td><%=rs.getString("current_bid") %></td>
+    			<td><%=rs.getString("current_highest_bid_user") %></td>
     			<td><%=rs.getString("pi") %></td>
     			<td><%=rs.getString("color") %></td>
     			<td><%=rs.getString("size") %></td>
@@ -82,6 +84,7 @@ if (request.getParameter("search") != null) {
 	    <th>Brand</th>
 	    <th>Initial Price</th>
 	    <th>Current Bid</th>
+	    <th>Current Bid User</th>
 	    <th>Price Increment</th>
 	    <th>Color</th>
 	    <th>Size</th>
@@ -101,6 +104,7 @@ if (request.getParameter("search") != null) {
     			<td><%=rs.getString("brand")%></td>
     			<td><%=rs.getString("ip") %></td>
     			<td><%=rs.getString("current_bid") %></td>
+    			<td><%=rs.getString("current_highest_bid_user") %></td>
     			<td><%=rs.getString("pi") %></td>
     			<td><%=rs.getString("color") %></td>
     			<td><%=rs.getString("size") %></td>
@@ -123,6 +127,7 @@ if (request.getParameter("search") != null) {
 	    <th>Brand</th>
 	    <th>Initial Price</th>
 	    <th>Current Bid</th>
+	    <th>Current Bid User</th>
 	    <th>Price Increment</th>
 	    <th>Color</th>
 	    <th>Size</th>
@@ -142,6 +147,7 @@ if (request.getParameter("search") != null) {
     			<td><%=rs.getString("brand")%></td>
     			<td><%=rs.getString("ip") %></td>
     			<td><%=rs.getString("current_bid") %></td>
+    			<td><%=rs.getString("current_highest_bid_user") %></td>
     			<td><%=rs.getString("pi") %></td>
     			<td><%=rs.getString("color") %></td>
     			<td><%=rs.getString("size") %></td>
@@ -164,6 +170,7 @@ if (request.getParameter("search") != null) {
 	    <th>Brand</th>
 	    <th>Initial Price</th>
 	    <th>Current Bid</th>
+	    <th>Current Bid User</th>
 	    <th>Price Increment</th>
 	    <th>Color</th>
 	    <th>Size</th>
@@ -187,6 +194,7 @@ if (request.getParameter("search") != null) {
     			<td><%=rs.getString("brand")%></td>
     			<td><%=rs.getString("ip") %></td>
     			<td><%=rs.getString("current_bid") %></td>
+    			<td><%=rs.getString("current_highest_bid_user") %></td>
     			<td><%=rs.getString("pi") %></td>
     			<td><%=rs.getString("color") %></td>
     			<td><%=rs.getString("size") %></td>
@@ -219,6 +227,7 @@ if (request.getParameter("search") != null) {
 	    <th>Brand</th>
 	    <th>Initial Price</th>
 	    <th>Current Bid</th>
+	    <th>Current Bid User</th>
 	    <th>Price Increment</th>
 	    <th>Color</th>
 	    <th>Size</th>
@@ -244,6 +253,7 @@ if (request.getParameter("search") != null) {
     			<td><%=rs.getString("brand")%></td>
     			<td><%=rs.getString("ip") %></td>
     			<td><%=rs.getString("current_bid") %></td>
+    			<td><%=rs.getString("current_highest_bid_user") %></td>
     			<td><%=rs.getString("pi") %></td>
     			<td><%=rs.getString("color") %></td>
     			<td><%=rs.getString("size") %></td>
@@ -276,6 +286,25 @@ if (request.getParameter("search") != null) {
 				Upper Limit: <input type="text" name="upperlimit" /> <br />
 		<input type="submit" name="AutomaticBid" value="AutomaticBid">
 		</form>
+		
+				<center>
+				<h3>View History By Item</h3>
+				</center>
+		<form action="viewhistory.jsp" method="POST">
+				Shoes ID: <input type="text" name="shoesid" /> <br />  
+		<input type="submit" name="viewhistorybyitem" value="View History">
+		</form>
+		
+		
+		<center>
+				<h3>View History By User</h3>
+				</center>
+		<form action="viewhistory.jsp" method="POST">
+				UserID: <input type="text" name="username" /> <br />  		
+		<input type="submit" name="viewhistorybyuser" value="View History">
+		</form>
+				
+		
 <%
 	out.print("Click here to go back to search items that you are interested in.  <a href='search.html'>Go back</a>");
 %>
