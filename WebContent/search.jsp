@@ -246,17 +246,16 @@ if (request.getParameter("search") != null) {
 		}
 		
 		%></table> <%
-		
-	
-}
+	}
 %>
 
 <form action="bid.jsp" method="POST">
 			Shoes ID: <input type="text" name="shoesid" /> <br />   
 			<input type="submit" name="Bid" value="Bid" />
 		</form>
-
-
+<%
+	out.print("Click here to go back to search items that you are interested in.  <a href='search.html'>Go back</a>");
+%>
 
 
 
