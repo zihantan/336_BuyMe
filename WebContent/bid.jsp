@@ -14,7 +14,7 @@
 		String placebid = request.getParameter("placebid");
 		String Uname = (String)session.getAttribute("userId");
 		if(shoesid.equals("") || placebid.equals("")){
-			out.print("Please choose a pair of shoes and place your bid. <a href='search.jsp'>try again</a>");
+			out.print("Please choose a pair of shoes and place your bid. <a href='search.html'>try again</a>");
 			return;
 		}
 	
@@ -66,7 +66,7 @@
 	 			}
 	 		}
 	 		if(inserted==false) {
-	 			out.print("Your bid is unsuccessful, please check your bid price! <a href='search.jsp'>Try Again</a>");
+	 			out.print("Your bid is unsuccessful, please check your bid price! <a href='search.html'>Try Again</a>");
 	 		}
 	 		/*
 	 		if((bid>=initialPrice && current_bid==null) || (bid>=Integer.parseInt(current_bid)+priceIncrement)){
@@ -88,14 +88,16 @@
 	 		}
 	 		*/
 	 	} else {
-	 		out.print("Your bid is unsuccessful, please check your shoe id! <a href='search.jsp'>Try Again</a>");
+	 		out.print("Your bid is unsuccessful, please check your shoe id! <a href='search.html'>Try Again</a>");
 	 	}
+	 	
+	 	
 	}else if(request.getParameter("AutomaticBid") != null){
 		String shoesid = request.getParameter("shoesid");   
 		String upperlimit = request.getParameter("upperlimit");
 		
 		if(shoesid.equals("") || upperlimit.equals("")){
-			out.print("Please choose a pair of shoes and place your bid. <a href='search.jsp'>try again</a>");
+			out.print("Please choose a pair of shoes and place your bid. <a href='search.html'>try again</a>");
 			return;
 		}
 		
