@@ -130,6 +130,12 @@
 			
 					String q = "UPDATE sell set current_bid = '" + initialPrice + "', current_highest_bid_user = '" + Uname + "' WHERE (shoesid = '" + shoesid + "')";
 					int result = stmt.executeUpdate(q);
+					
+					// select * from bid where shoesid = '#'
+					// boolean check = rs.getBoolean("");
+					// if check==true
+					// auto increment here
+					
 		 			out.println("Your bid is successful! Since there is no bid yet, your bid price will be the initial price. <a href='search.html'>Go Back</a>");
 	 			
 	 		} else {

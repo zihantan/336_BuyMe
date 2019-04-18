@@ -20,8 +20,9 @@ if (request.getParameter("search") != null) {
 	String gender = request.getParameter("gender");
 	String brand = request.getParameter("brand");
 	String pricerange = request.getParameter("pricerange");
+	String size = request.getParameter("size");
 	
-	if(pricerange.equals("any") || name.equals("") || color.equals("any") || kind.equals("any") || gender.equals("any") || brand.equals("")) {
+	if(pricerange.equals("any") || name.equals("") || color.equals("any") || kind.equals("any") || gender.equals("any") || brand.equals("")|| size.equals("any")) {
 		out.print("There is/are empty Input(s)! Please type something for name and brand and avoid selecting 'any' for options. <a href='search.html'>try again</a>");
 		return;
 	}
@@ -52,7 +53,7 @@ if (request.getParameter("search") != null) {
 	  </tr>
 		<% 
 		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and ip < 50" );
+				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size ='" + size +"' and ip < 50" );
 		while(rs.next()){
 			%>
 			<tr>
@@ -95,7 +96,7 @@ if (request.getParameter("search") != null) {
 	  </tr>
 		<% 
 		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and ip >=50 and ip < 100" );
+				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >=50 and ip < 100" );
 		while(rs.next()){
 			%>
 			<tr>
@@ -138,7 +139,7 @@ if (request.getParameter("search") != null) {
 	  </tr>
 		<% 
 		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and ip >= 100 and ip <200" );
+				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 100 and ip <200" );
 		while(rs.next()){
 			%>
 			<tr>
@@ -185,7 +186,7 @@ if (request.getParameter("search") != null) {
 		//out.print(mysqltest);
 		
 		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and ip >= 200" );
+				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 200" );
 		while(rs.next()){
 			%>
 			<tr>
