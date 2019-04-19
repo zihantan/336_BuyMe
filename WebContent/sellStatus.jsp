@@ -6,7 +6,7 @@
 
 <%@ page import ="java.sql.*, java.util.Date, java.text.SimpleDateFormat" %>
 <%
-try {
+//try {
 
 	String url = "jdbc:mysql://cs336group5.czzknrtounuc.us-east-2.rds.amazonaws.com:3306/cs336";
 	Class.forName("com.mysql.jdbc.Driver");
@@ -21,7 +21,7 @@ try {
 		out.print("Missing Inputs! <a href='sell.jsp'>try again</a>");
 		return;
 	}
-	
+	//out.print("hello1");
 	String name = request.getParameter("Name");
 	String brand = request.getParameter("Brand");
 	int ip = Integer.parseInt(request.getParameter("Initial Price"));
@@ -34,7 +34,7 @@ try {
 	String type = request.getParameter("kind");
 	String gender = request.getParameter("gender");		
 	
-	ResultSet checkUser = stmt.executeQuery("select * from sell where user='" + username + "'");
+	ResultSet checkUser = stmt.executeQuery("select * from users where user='" + username + "'");
 	
 	if(!checkUser.next()) {
 		out.print("Invalid Username! <a href='sell.jsp'>try again</a>");
@@ -64,7 +64,8 @@ try {
 
 	out.print(username);
 	out.print(" your Shoes is on Stock! <a href='sell.jsp'>Return to Last page</a>");
-} catch (Exception ex) {
-	out.print("Information Error <a href='sell.jsp'>try again</a>");
-}
+//} catch (Exception ex) {
+	
+	//out.print("Information Error <a href='sell.jsp'>try again</a>");
+
 %>
