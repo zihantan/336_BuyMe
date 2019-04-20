@@ -24,6 +24,7 @@
       <a href="search.html" class="w3-bar-item w3-button">Buy</a>
       <a href="sell.jsp" class="w3-bar-item w3-button">Sell</a>
         <a href="question.html" class="w3-bar-item w3-button">Questions</a>
+        <a href="logout.jsp" class="w3-bar-item w3-button">Log out</a>
     </div>
   </div>
 </div>
