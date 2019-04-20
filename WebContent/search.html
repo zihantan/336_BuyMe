@@ -32,9 +32,15 @@
 		<div class="row">
 			<div class="col-md-6">
 				<center>
-				<h3>Search the shoes you want!</h3>
+				<h3>Browse what we have now:</h3>
 				</center>
 				<form method="post" action="search.jsp" action="welcome.html">
+				<input type="submit" name="browse" value="browse"/>
+				
+				
+				<center>
+				<h3>Search the shoes you want!</h3>
+				</center>
 					<div class="form-group">
 				    	<label for="name">Name of the shoes</label>
 				    	<input type="text" class="form-control" id="name" name="name" placeholder="Name of the item">
@@ -74,16 +80,18 @@
     </select>  
     </div>
     
-    <div class="form-group">
-    				  		<label for="pricerange">Price range</label>
+        				  	<div class="form-group">
+				  		<label for="pricerange">Price range</label>
                         <select id="pricerange" name="pricerange" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
         					<option value="any">any</option>  
-        					<option value="0~50">0~50</option>  
+        					<option value="~50">~50</option>  
       						<option value="50~100">50~100</option>  
-   						    <option value="100~200">100~200</option>  
+   						    <option value="100~200">100~200</option>
    						    <option value="200~">200~</option>   
-    </select> 
+   						
+    </select>  
     </div>
+    
     <div class="form-group">
     				  		<label for="gender">Gender/kid</label>
                         <select id="gender" name="gender" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
@@ -93,8 +101,25 @@
    						    <option value="kid">kid</option>   
     </select> 
     </div>
+    <div class="form-group">
+    				  		<label for="size">Size</label>
+                        <select id="size" name="size" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
+        					<option value="any">any</option>   
+      						<option value="4">4</option>  
+   						    <option value="5">5</option>  
+   						    <option value="6">6</option>
+   						    <option value="7">7</option>
+   						    <option value="8">8</option>
+   						    <option value="9">9</option>
+   						    <option value="10">10</option>
+   						    <option value="11">11</option>
+   						    <option value="12">12</option>
+   						    <option value="13">13</option>
+   						    <option value="14">14</option>   
+    </select> 
+    </div>
 
-				  	<input type="submit" class="btn btn-default">
+				  	<input type="submit" class="btn btn-default" name="search" value="search">
 		
 
 				</form>

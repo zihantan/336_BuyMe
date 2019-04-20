@@ -13,12 +13,12 @@
 <!-- navigation bar -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b><i>BuyMe</i></b> <i></i></a>
+    <a href="admin.html" class="w3-bar-item w3-button"><b><i>BuyMe</i></b> <i></i></a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="admin.html" class="w3-bar-item w3-button">Home</a>
       <a href="gaccount.html" class="w3-bar-item w3-button">Generate Account</a>
-	 <a href="greport.html" class="w3-bar-item w3-button">Generate Report</a>
+	 <a href="greport.jsp" class="w3-bar-item w3-button">Generate Report</a>
       <a href="communication.jsp" class="w3-bar-item w3-button">Communication</a>
     </div>
   </div>
@@ -31,7 +31,7 @@
 		<br>
 		<div class="row">
 			<div class="col-md-6">
-			<form method="post" action="report.jsp" action="welcome.html">
+			<form method="post" action="report.jsp">
 				<center>
 				<div class="form-group">
 				<h2>Generate report</h2>
@@ -39,11 +39,15 @@
 				</center>
 				
 				<center>
-				<h3>Total earning</h3>
+					<h3>Total earning</h3>
 				</center>
 				<center>
 				<div class="form-group">
+<<<<<<< HEAD:WebContent/greport.html
 				<input type="submit" name="totalearn" value="total earning">
+=======
+					<input type="submit" name="totalearn" value="Total Earnings">
+>>>>>>> b94eb70004ee739a5c03703866100d3a7863967c:WebContent/greport.jsp
 				</div>
 				</center>
 				
@@ -60,13 +64,21 @@
 				    	<label for="shoes">shoes</label>
 				    	<input type="text" class="form-control" id="shoes" name="shoes" placeholder="Please type in shoesID">
 				 </div>
+<<<<<<< HEAD:WebContent/greport.html
 				<input type="submit" class="btn btn-default" name="shoes report" value="shoes report">
+=======
+				<input type="submit" class="btn btn-default" name="shoesrp" value="shoes report">
+>>>>>>> b94eb70004ee739a5c03703866100d3a7863967c:WebContent/greport.jsp
 				 
 			     <div class="form-group">
 				    	<label for="itemtype">item type</label>
 				    	<input type="text" class="form-control" id="itemtype" name="itemtype" placeholder="Please type in item type">
 				 </div>
+<<<<<<< HEAD:WebContent/greport.html
 				 <input type="submit" class="btn btn-default" name="item report" value="item report">
+=======
+				 <input type="submit" class="btn btn-default" name="typerp" value="type report">
+>>>>>>> b94eb70004ee739a5c03703866100d3a7863967c:WebContent/greport.jsp
 				 
 				 <center>
 				 <h3>Best Selling of</h3>
@@ -75,12 +87,12 @@
 				 <h4>item</h4>
 				 <div class="form-group">
 				 </div>
-				 <input type="submit" class="btn btn-default">
+				 <input type="submit" class="btn btn-default" name="bestitem" value="best item(s) report">
 				 
 				 <h4>user</h4>
 				 <div class="form-group">
 				 </div>
-				 <input type="submit" class="btn btn-default">
+				 <input type="submit" class="btn btn-default" name="bestenduser" value="best end-user report">
 		
 
 				</form>

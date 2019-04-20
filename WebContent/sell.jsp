@@ -41,21 +41,8 @@
 				Name: <input type="text" name="Name" /> <br /> 
 				Brand: <input type="text" name="Brand" /> <br /> 
 				Initial Price:  <input type="text" name="Initial Price" /> <br /> 
+				Reserve:  <input type="text" name="reservePrice" placeholder="(your reserve price)"/> <br />
 				Price Increment:  <input type="text" name="Price Increment" /> <br /> 
-				<div class="form-group">
-				  		<label for="color">Color of the shoes</label>
-                        <select id="color" name="color" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
-        					<option value="any">any</option>  
-        					<option value="white">white</option>  
-      						<option value="black">black</option>  
-   						    <option value="grey">grey</option>  
-   						    <option value="blue">blue</option>  
-      						<option value="yellow">yellow</option>  
-   						    <option value="red">red</option>  
-   						    <option value="purple">purple</option>  
-      						<option value="metalic">metalic</option>  
-   						    <option value="orange">orange</option>  
-    			</select> </div> 
 				Size:  <input type="text" name="Size" /> <br /> 
 				Last Date of Bidding <input type="text" name="Date" placeholder="(Format: yyyy-MM-dd)"/> <br />
 				<div class ="form-group">
@@ -76,6 +63,21 @@
    						    <option value="men">men</option>  
    						    <option value="kid">kid</option>   
     			</select></div>
+    			
+    			<div class="form-group">
+				  		<label for="color">Color of the shoes</label>
+                        <select id="color" name="color" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
+        					<option value="any">any</option>  
+        					<option value="white">white</option>  
+      						<option value="black">black</option>  
+   						    <option value="grey">grey</option>  
+   						    <option value="blue">blue</option>  
+      						<option value="yellow">yellow</option>  
+   						    <option value="red">red</option>  
+   						    <option value="purple">purple</option>  
+      						<option value="metalic">metalic</option>  
+   						    <option value="orange">orange</option>  
+    			</select> </div> 
 				<input type="submit" value="Put on Stock" />
 			</form>
 		</center>
