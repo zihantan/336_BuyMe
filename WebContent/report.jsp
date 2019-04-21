@@ -110,7 +110,8 @@ table, th, td {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
 		Statement stmt = con.createStatement();
-		  ResultSet rs1 = stmt.executeQuery("select sum(trans_price) as total from auction a, sell s where a.shoesid=s.shoesid and s.type='" + itype + "'");
+		//System.out.println("select sum(trans_price) as total from auction,  where type='" + itype + "'");
+		  ResultSet rs1 = stmt.executeQuery("select sum(trans_price) as total from auction where type_fromsell='" + itype + "'");
 			if (rs1.next()) {
 			 		//out.println("Welcome " + username + "! <a href='home.jsp'>Logout</a>");
 		    
@@ -123,7 +124,7 @@ table, th, td {
 			     		out.println("Invalid report or no transaction yet for this type<a href='greport.jsp'>try again</a>");
 			 		}
 		}
-		ResultSet rs = stmt.executeQuery("select * from auction a, sell s where a.shoesid=s.shoesid and s.type='" + itype + "'");
+		ResultSet rs = stmt.executeQuery("select * from auction a where  a.type_fromsell='" + itype + "'");
 		%>
 		<table>
 		  <tr>
@@ -156,7 +157,7 @@ table, th, td {
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
 		Statement stmt = con.createStatement();
 					
-		ResultSet rs = stmt.executeQuery("select t1.name, max(number) as maxnum from (select s.name, count(*)as number from auction a, sell s where a.shoesid=s.shoesid Group BY s.name) t1");
+		ResultSet rs = stmt.executeQuery("select t1.name, max(number) as maxnum from (select a.name, count(*)as number from auction a) t1");
 		 if (rs.next()) {
 		 		//out.println("Welcome " + username + "! <a href='home.jsp'>Logout</a>");
 	   			 String nameRemember= rs.getString("t1.name");
