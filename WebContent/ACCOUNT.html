@@ -20,6 +20,7 @@
       <a href="search.html" class="w3-bar-item w3-button">Buy</a>
       <a href="sell.jsp" class="w3-bar-item w3-button">Sell</a>
         <a href="question.html" class="w3-bar-item w3-button">Questions</a>
+         <a href="logout.jsp" class="w3-bar-item w3-button">Log out</a>
     </div>
   </div>
 </div>
@@ -91,6 +92,61 @@
                         <label for="Security Code">Security Code</label>
                         <input type="text" class="form-control" id="SecCode" name="SecCode" placeholder="CVV">
                     </div>
+				  	<input type="submit" class="btn btn-default" value="Add">
+				  	
+				  	</form>
+				    <center>
+				  	<h3>What you want(alert)</h3>
+				</center>
+				<form method="post" action="addalert.jsp">
+					<div class="form-group">
+				    	<label for="brand">brand</label>
+				    	<input type="text" class="form-control" id="brand" name="brand" placeholder="brand">
+				  	</div>
+				  	<div class="form-group">
+    				  		<label for="size">Size</label>
+                        <select id="size" name="size" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
+        					<option value="any">any</option>   
+      						<option value="4">4</option>  
+   						    <option value="5">5</option>  
+   						    <option value="6">6</option>
+   						    <option value="7">7</option>
+   						    <option value="8">8</option>
+   						    <option value="9">9</option>
+   						    <option value="10">10</option>
+   						    <option value="11">11</option>
+   						    <option value="12">12</option>
+   						    <option value="13">13</option>
+   						    <option value="14">14</option>   
+    </select> 
+    </div>
+					<div class="form-group">
+				  		<label for="color">Color of the shoes</label>
+                        <select id="color" name="color" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
+        					<option value="any">any</option>  
+        					<option value="white">white</option>  
+      						<option value="black">black</option>  
+   						    <option value="grey">grey</option>  
+   						    <option value="blue">blue</option>  
+      						<option value="yellow">yellow</option>  
+   						    <option value="red">red</option>  
+   						    <option value="purple">purple</option>  
+      						<option value="metalic">metalic</option>  
+   						    <option value="orange">orange</option>  
+   						
+    </select>  
+    </div>
+                    <div class="form-group">
+				  		<label for="kind">Type of the shoes</label>
+                        <select id="kind" name="kind" onkeydown="Select.del(this,event)" onkeypress="Select.write(this,event)">  
+        					<option value="any">any</option>  
+        					<option value="sneaker">sneaker</option>  
+      						<option value="sport">sport</option>  
+   						    <option value="boots">boots</option>
+   						    <option value="slipper">slipper</option>   
+   						
+    </select>  
+    </div>
 				  	<input type="submit" class="btn btn-default" value="Add">
 		
 	</div>

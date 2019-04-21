@@ -23,6 +23,7 @@ table, th, td {
     <div class="w3-right w3-hide-small">
       <a href="cr_questions.jsp" class="w3-bar-item w3-button">Question</a>
       <a href="Modify.html" class="w3-bar-item w3-button">Modify</a>
+      <a href="logout.jsp" class="w3-bar-item w3-button">Log out</a>
     </div>
   </div>
 </div>

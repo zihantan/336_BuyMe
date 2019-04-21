@@ -20,6 +20,7 @@
       <a href="gaccount.html" class="w3-bar-item w3-button">Generate Account</a>
 	 <a href="greport.jsp" class="w3-bar-item w3-button">Generate Report</a>
       <a href="communication.jsp" class="w3-bar-item w3-button">Communication</a>
+      <a href="logout.jsp" class="w3-bar-item w3-button">Log out</a>
     </div>
   </div>
 </div>
