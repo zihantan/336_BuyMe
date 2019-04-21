@@ -46,7 +46,7 @@ try {
 	if(!checkUser.next()) {
 		out.print("Invalid Username! <a href='sell.jsp'>try again</a>");
 		return;
-			
+	}
 	int reserve_money; 
 	if(reserve_price.equals("")){
 		reserve_money = 0;
@@ -82,7 +82,7 @@ try {
 	ps.setString(9, type);
 	ps.setString(10, gender);
 	ps.setInt(11, reserve_money);
-				System.out.print(ps);
+				//System.out.print(ps);
 	ps.executeUpdate();
 
 	out.print(username);

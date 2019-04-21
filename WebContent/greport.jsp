@@ -44,11 +44,7 @@
 				</center>
 				<center>
 				<div class="form-group">
-<<<<<<< HEAD:WebContent/greport.html
-				<input type="submit" name="totalearn" value="total earning">
-=======
 					<input type="submit" name="totalearn" value="Total Earnings">
->>>>>>> b94eb70004ee739a5c03703866100d3a7863967c:WebContent/greport.jsp
 				</div>
 				</center>
 				
@@ -56,44 +52,35 @@
 				<h3>Earning per</h3>
 				</center>
 				<div class="form-group">
-				    	<label for="user">user</label>
+				    	<label for="user">Seller</label>
 				    	<input type="text" class="form-control" id="user" name="user" placeholder="Please type in user name">
 				 </div>
-				<input type="submit" class="btn btn-default" name="user report" value="user reports">
+				<input type="submit" class="btn btn-default" name="userrp" value="User Reports">
 				
 				<div class="form-group">
-				    	<label for="shoes">shoes</label>
+				    	<label for="shoes">Shoes</label>
 				    	<input type="text" class="form-control" id="shoes" name="shoes" placeholder="Please type in shoesID">
 				 </div>
-<<<<<<< HEAD:WebContent/greport.html
-				<input type="submit" class="btn btn-default" name="shoes report" value="shoes report">
-=======
-				<input type="submit" class="btn btn-default" name="shoesrp" value="shoes report">
->>>>>>> b94eb70004ee739a5c03703866100d3a7863967c:WebContent/greport.jsp
-				 
+				<input type="submit" class="btn btn-default" name="shoesrp" value="Shoes Report"> 
 			     <div class="form-group">
-				    	<label for="itemtype">item type</label>
+				    	<label for="itemtype">Item Type</label>
 				    	<input type="text" class="form-control" id="itemtype" name="itemtype" placeholder="Please type in item type">
 				 </div>
-<<<<<<< HEAD:WebContent/greport.html
-				 <input type="submit" class="btn btn-default" name="item report" value="item report">
-=======
-				 <input type="submit" class="btn btn-default" name="typerp" value="type report">
->>>>>>> b94eb70004ee739a5c03703866100d3a7863967c:WebContent/greport.jsp
+				 <input type="submit" class="btn btn-default" name="typerp" value="Type Report">
 				 
 				 <center>
 				 <h3>Best Selling of</h3>
 				 </center>
 				 
-				 <h4>item</h4>
+				 <h4>Item</h4>
 				 <div class="form-group">
 				 </div>
-				 <input type="submit" class="btn btn-default" name="bestitem" value="best item(s) report">
+				 <input type="submit" class="btn btn-default" name="bestitem" value="Best Item(s) Report">
 				 
-				 <h4>user</h4>
+				 <h4>User</h4>
 				 <div class="form-group">
 				 </div>
-				 <input type="submit" class="btn btn-default" name="bestenduser" value="best end-user report">
+				 <input type="submit" class="btn btn-default" name="bestenduser" value="Best End-User Report">
 		
 
 				</form>

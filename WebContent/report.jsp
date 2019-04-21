@@ -16,7 +16,7 @@ table, th, td {
 	//session.setAttribute("userid",username);
 //out.println("test");
 	if (request.getParameter("totalearn") != null) {
-		out.println("test");
+		//out.println("test");
 		String url = "jdbc:mysql://cs336group5.czzknrtounuc.us-east-2.rds.amazonaws.com:3306/cs336";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "cs336", "cs336project");
