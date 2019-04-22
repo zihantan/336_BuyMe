@@ -29,7 +29,7 @@ Statement stmt10 = con.createStatement();
 	String color = request.getParameter("color");
 	
 	if(size.equals("") || brand.equals("") || kind.equals("")||color.equals("")) {
-		out.print("ADD Failed11! Empty Inputs! <a href='ACCOUNT.html'>try again</a>");
+		out.print("ADD Failed! Empty Inputs! <a href='ACCOUNT.html'>try again</a>");
 		return;
 	}
 	

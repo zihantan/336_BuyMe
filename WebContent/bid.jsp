@@ -223,12 +223,26 @@
 		 							}
 				 					i++;
 		 						}
+		 						//ResultSet bs = stmt.executeQuery("select * from bid where buyer='" + + "'");
 		 						if(i%2==0) { // second person
 		 							String t = "UPDATE sell set current_bid = '" + (bid_of_2 - priceIncrement) + "', current_highest_bid_user = '" + autobuyer + "' WHERE (shoesid = '" + shoesid + "')";
 			 						int result1 = stmt.executeUpdate(t);	
+			 						insert = "INSERT INTO addalert(username, info)" + "VALUES (?, ?)";
+			 						PreparedStatement ps1 = con.prepareStatement(insert);
+			 						ps1.setString(1, autobuyer);
+			 						ps1.setString(2, "The current bid past your upperlimit price!");
+			 					
+			 						ps1.executeUpdate();
 		 						} else { // first person
 		 							String t = "UPDATE sell set current_bid = '" + (bid_of_1 - priceIncrement) + "', current_highest_bid_user = '" + Uname + "' WHERE (shoesid = '" + shoesid + "')";
 			 						int result1 = stmt.executeUpdate(t);	
+			 						insert = "INSERT INTO addalert(username ,info)" + "VALUES (?, ?)";
+			 						PreparedStatement ps1 = con.prepareStatement(insert);
+			 						ps1.setString(1, Uname);
+			 						//ps1.setSInt(2, );
+			 						ps1.setString(2, "The current bid past your upperlimit price!");
+			 					
+			 						ps1.executeUpdate();
 		 						}
 		 						break;
 		 					}

@@ -14,9 +14,10 @@ table, th, td {
 	
 	<table>
 	  <tr>
-	    <th>Alert</th>
+	    <th>Alert ID</th>
 	    <th>Brand</th>
 	    <th>Bid ID</th>
+	    <th>Information</th>
 	  </tr>
 	 <% 
 	
@@ -27,20 +28,19 @@ table, th, td {
 	Statement stmt = con.createStatement();
 	ResultSet rs = stmt.executeQuery("select * from addalert where username='" + username + "'");
 	
-	if(!rs.next()){
-		out.print("You don't have any alert. <a href='ACCOUNT.html'>Go back to account</a>");
-	}else{
-		while(rs.next()){
+	
+	if(rs.next()){
 			%>
 			<tr>
     			<td><%=rs.getString("alertid")%></td>
     			<td><%=rs.getString("brand")%></td>
-    			<td><%=rs.getString("bidid")%></td>
+    			<td><%=rs.getString("bid")%></td>
+    			<td><%=rs.getString("info") %></td>
 			</tr>
 			<%
 	}
 		
 	%></table> <%
 	out.print("Back to Your Account. <a href='ACCOUNT.html'>Go back to account</a>");
-	}
+	
 	%>
