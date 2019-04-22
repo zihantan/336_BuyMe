@@ -39,14 +39,10 @@ try {
 	//String username = request.getParameter("username");	
 	String username = (String)session.getAttribute("userId");
 	String type = request.getParameter("kind");
-	String gender = request.getParameter("gender");		
+	String gender = request.getParameter("gender");
+	//out.print("hello1");
 	
-	ResultSet checkUser = stmt.executeQuery("select * from users where user='" + username + "'");
-	
-	if(!checkUser.next()) {
-		out.print("Invalid Username! <a href='sell.jsp'>try again</a>");
-		return;
-	}
+	//ResultSet checkUser = stmt.executeQuery("select * from users where user='" + username + "'");
 	int reserve_money; 
 	if(reserve_price.equals("")){
 		reserve_money = 0;
@@ -55,7 +51,7 @@ try {
 	}
 	//ResultSet checkUser = stmt.executeQuery("select * from user where user='" + username + "'");
 	
-	
+	//out.print("hello1");
 	if(name.equals("") || brand.equals("") ||  color.equals("") || date1.equals("") || type.equals("")) {
 		out.print("Missing Inputs! <a href='sell.jsp'>try again</a>");
 		return;
@@ -87,16 +83,7 @@ try {
 
 	out.print(username);
 	out.print(" your Shoes is on Stock! <a href='sell.jsp'>Return to Last page</a>");
-//} catch (Exception ex) {
-	
-	//out.print("Information Error <a href='sell.jsp'>try again</a>");
-
-	//out.print(" your Shoes are on Stock! <a href='sell.jsp'>Return to Last page</a>");
-	//out.print(reserve_money);
-} catch (Exception ex) {
-	//String reserve_price = request.getParameter("reserve Price");
-	//int reserve_money = Integer.parseInt(reserve_price);
-	//out.print(reserve_money);
+} catch (Exception ex) {	
 	out.print("Information Error <a href='sell.jsp'>try again</a>");
 }
 
