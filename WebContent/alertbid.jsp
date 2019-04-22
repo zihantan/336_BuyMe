@@ -28,10 +28,9 @@ table, th, td {
 	ResultSet rs = stmt.executeQuery("select * from addalert where username='" + username + "'");
 	
 	if(!rs.next()){
-		out.print("You don't have any alert. <a href='ACCOUNT.html>Go Back.</a>");
-	}
-	
-	while(rs.next()){
+		out.print("You don't have any alert. <a href='ACCOUNT.html'>Go back to account</a>");
+	}else{
+		while(rs.next()){
 			%>
 			<tr>
     			<td><%=rs.getString("alertid")%></td>
@@ -42,5 +41,6 @@ table, th, td {
 	}
 		
 	%></table> <%
-	out.print("Back to Your Account. <a href='ACCOUNT.html'>Go Back.</a>");
+	out.print("Back to Your Account. <a href='ACCOUNT.html'>Go back to account</a>");
+	}
 	%>
