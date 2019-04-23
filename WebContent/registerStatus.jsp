@@ -26,7 +26,7 @@ try {
 		return;
 	}
 
-	String insert = "INSERT INTO users(username, password, name,email,favoritebrand)" + "VALUES (?, ?, ?,?,?)";
+	String insert = "INSERT INTO users(username, password, name, email, favoritebrand)" + "VALUES (?, ?, ?,?,?)";
 
 	PreparedStatement ps = con.prepareStatement(insert);
 	ps.setString(1, username);

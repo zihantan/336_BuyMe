@@ -17,7 +17,7 @@ try {
 	String brand = request.getParameter("brand");
 	//String Username = request.getParameter("Username");
 	String username = (String)session.getAttribute("userId");
-Statement stmt10 = con.createStatement();
+	Statement stmt10 = con.createStatement();
 
 	ResultSet rs10 = stmt10.executeQuery("select * from users where username='" + username + "'");
 	
@@ -28,25 +28,25 @@ Statement stmt10 = con.createStatement();
 	String kind = request.getParameter("kind");
 	String color = request.getParameter("color");
 	
-	if(size.equals("") || brand.equals("") || kind.equals("")||color.equals("")) {
-		out.print("ADD Failed! Empty Inputs! <a href='ACCOUNT.html'>try again</a>");
+	if(size.equals("") || brand.equals("")) {
+		out.print("ADD Failed! Missing Inputs! <a href='ACCOUNT.html'>try again</a>");
 		return;
 	}
 	
 
-	String insert = "INSERT INTO addalert( username,brand, size,color,kind)" + "VALUES (?, ?, ?, ?, ?)";
+	String insert = "INSERT INTO addalert(username, brand, size, name)" + "VALUES (?, ?, ?, ?)";
 
 	PreparedStatement ps = con.prepareStatement(insert);
 	ps.setString(1, username);
 	ps.setString(2, brand);
 	ps.setString(3, size);
-	ps.setString(4, color);
-	ps.setString(5, kind);			
+	ps.setString(4, name);			
 	ps.executeUpdate();
 
 	out.print("Add alert information succuesful! <a href='ACCOUNT.html'>Return to home page</a>");
 } catch (Exception ex) {
-	out.print("ADD FAILed! <a href='ACCOUNT.html'>try again</a>");
+	out.print("ADD FAILED! <a href='ACCOUNT.html'>try again</a>");
 
 }
+	
 %>
