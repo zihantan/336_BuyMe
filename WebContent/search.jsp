@@ -52,8 +52,8 @@ if (request.getParameter("search") != null) {
 	    <th>Gender</th>
 	  </tr>
 		<% 
-		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size ='" + size +"' and ip < 50" );
+		rs = stmt.executeQuery("select * from sell where name like '%" + name 
+				+ "%' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size ='" + size +"' and ip < 50 and date >= curdate()");
 		while(rs.next()){
 			%>
 			<tr>
@@ -95,8 +95,8 @@ if (request.getParameter("search") != null) {
 	    <th>Gender</th>
 	  </tr>
 		<% 
-		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >=50 and ip < 100" );
+		rs = stmt.executeQuery("select * from sell where name like '%" + name 
+				+ "%' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 50 and ip < 100 and date >= curdate()");
 		while(rs.next()){
 			%>
 			<tr>
@@ -138,8 +138,8 @@ if (request.getParameter("search") != null) {
 	    <th>Gender</th>
 	  </tr>
 		<% 
-		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 100 and ip <200" );
+		rs = stmt.executeQuery("select * from sell where name like '%" + name 
+				+ "%' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 100 and ip <200 and date >= curdate()" );
 		while(rs.next()){
 			%>
 			<tr>
@@ -185,8 +185,8 @@ if (request.getParameter("search") != null) {
 				//+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and price >= 200";
 		//out.print(mysqltest);
 		
-		rs = stmt.executeQuery("select * from sell where name ='" + name 
-				+ "' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 200" );
+		rs = stmt.executeQuery("select * from sell where name like '%" + name 
+				+ "%' and color='" + color + "' and brand ='" + brand+ "' and type ='" + kind +"' and gender='" + gender + "' and size='" + size + "' and ip >= 200 and date >= curdate()" );
 		while(rs.next()){
 			%>
 			<tr>
@@ -245,7 +245,7 @@ if (request.getParameter("search") != null) {
 
 	Statement stmt = con.createStatement();
 	ResultSet rs;
-	rs = stmt.executeQuery("select * from sell");
+	rs = stmt.executeQuery("select * from sell where date >= curdate()");
 	while(rs.next()){
 			%>
 			<tr>

@@ -185,7 +185,7 @@
 		 			while(ts.next()){
 		 				int auto = ts.getInt("auto");
 		 				String autobuyer = ts.getString("buyer");
-		 				if(auto==1) {
+		 				if(auto==1 && !autobuyer.equals(Uname)) {
 		 					int upper_limit2 = ts.getInt("upperlimit");
 		 					// bid_price is the first auto's bid price
 		 					if(bid_price + priceIncrement <= upper_limit2) {
